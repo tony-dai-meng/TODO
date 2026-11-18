@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 import * as config from "./config/config.js";
 import express from "express";
 import cors from "cors";
+import { Todo } from "./models/todo.js";
+
 
 const app = express();
 // Middleware
@@ -25,3 +27,5 @@ mongoose.connection.on("error", (err) => {
 app.listen(config.PORT, () => {
   console.log(`Server running on port ${config.PORT}`);
 });
+
+app.post
